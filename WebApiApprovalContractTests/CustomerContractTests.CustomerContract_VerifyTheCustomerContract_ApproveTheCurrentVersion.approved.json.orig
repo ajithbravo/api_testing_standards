@@ -1,0 +1,160 @@
+﻿{
+    "swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title": "CustomersApi"
+    },
+    "host": "localhost:4000",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/api/customers": {
+            "get": {
+                "tags": [
+                    "Customer"
+                ],
+                "operationId": "Customer_Get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/html",
+                    "application/xml",
+                    "text/xml"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/CustomerSearchResults"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/customer": {
+            "get": {
+                "tags": [
+                    "Customer"
+                ],
+                "operationId": "Customer_GetCustomer",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/html",
+                    "application/xml",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/newCustomer": {
+            "post": {
+                "tags": [
+                    "Customer"
+                ],
+                "operationId": "Customer_Post",
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "text/html",
+                    "application/xml",
+                    "text/xml",
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "text/html",
+                    "application/xml",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/NewCustomerRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "CustomerSearchResults": {
+            "type": "object",
+            "properties": {
+                "Customers": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Customer"
+                    }
+                }
+            }
+        },
+        "Customer": {
+            "type": "object",
+            "properties": {
+                "Name": {
+                    "type": "string"
+                },
+                "Id": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Address": {
+                    "type": "string"
+                },
+                "Telephone": {
+                    "type": "string"
+                }
+            }
+        },
+        "NewCustomerRequest": {
+            "required": [
+                "Name",
+                "Address"
+            ],
+            "type": "object",
+            "properties": {
+                "Name": {
+                    "type": "string"
+                },
+                "Address": {
+                    "type": "string"
+                },
+                "Telephone": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

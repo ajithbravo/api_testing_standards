@@ -1,0 +1,3 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=43B8CAAA_002D71F9_002D4CD5_002D806D_002DCACE2B579CCA_002Ff_003ACustomerControllerTests_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=DDA23226_002D9963_002D407E_002DA597_002D183500EF7F2E_002Fd_003AApp_005FStart_002Ff_003ASwaggerConfig_002Ecs/@EntryIndexedValue">ForceIncluded</s:String></wpf:ResourceDictionary>
